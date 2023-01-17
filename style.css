@@ -5,13 +5,15 @@ body {
     font-family: 'Gotham','NanumSquare', 돋움, sans-serif; 
 }
 
-a { display: block; text-decoration: none; /* color: #000; */ }
+a { display: block; text-decoration: none; /* color: #000; */  }
 
 
 /* head */
 
 header {
-    background: url(./img/main_img1_pc.jpg) no-repeat 50% / cover;
+    background: url(./img/main_img1_pc.jpg) no-repeat;
+    background-position: top left;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     opacity: 1;
@@ -151,7 +153,19 @@ header .header_checkbox:hover a {
     color: #fff;
     font-weight: 600;
 }
-header .header_checkbox a svg {
+header .header_checkbox .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+header .header_checkbox .fa-paper-plane-o::before {
+    content: "\f1d9";
+}
+/* header .header_checkbox a svg {
     width: 15px;
     height: 14px;
 }
@@ -160,7 +174,7 @@ header .header_checkbox a svg path {
 }
 header .header_checkbox:hover a svg path {
     fill: #fff;
-}
+} */
 
 
 
@@ -181,7 +195,7 @@ main .main_about_box .txt {
 main .main_about_box .txt h2 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: normal;
 }
@@ -194,14 +208,16 @@ main .main_about_box .about_box {
     width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 390px);
+    grid-template-columns: repeat(3, 310px);
     grid-auto-rows: 229px;
-    justify-content: space-evenly;
+    gap: 80px;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    /* background-color: #333; */
 }
 main .main_about_box .box {
     font-size: 15px;
     color: #323232;
-    padding: 0 30px;
     border: 1px solid #e9e9e9;
     position: relative;  
     padding: 25px;
@@ -217,11 +233,25 @@ main .main_about_box .about_box .img {
     position: absolute;
     top: -30px; 
 }
-main .main_about_box .box .img .img_svg {
+/* main .main_about_box .box .img .img_svg {
     display: block;
     width: 25px; height: 25px;
     filter: invert(100%);
     margin: 15px auto;
+} */
+main .main_about_box .box .img i {
+    color: #fff;
+    font-size: 30px;
+    line-height: 55px;
+}
+.icon-caution::before {
+    content: "\e93b";
+}
+.icon-clock2::before {
+    content: "\e93f";
+}
+.icon-tools::before {
+    content: "\e987";
 }
 main .main_about_box .about_box .img:hover {
     background-color: #d6b161;
@@ -402,13 +432,22 @@ main .main_area .box1_txt>a {
 main .main_area .box1_txt>a:hover {
     color: #000;
 }
-main .main_area .box1_txt>a>img {
+/* main .main_area .box1_txt>a>img {
     position: absolute;
     top: 2px;
     margin-left: 10px;
     font-weight: bold;
     width: 16px; height: 15px;
     filter: contrast(0%) brightness(140%); 
+} */
+main .main_area i {
+    position: absolute;
+    top: 2px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+main .main_area .icon-arrows_slim_right::before {
+    content: "\e669";
 }
 
 main .main_clients {
